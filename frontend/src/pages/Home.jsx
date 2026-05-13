@@ -66,11 +66,11 @@ const services = [
 const reviewAreas = ["Workflows", "Systems", "Staffing", "KPIs", "Reporting", "Denials", "A/R", "Payor Trends"];
 
 const whyBullets = [
-    "Hands-on operational experience",
-    "Data-driven insight",
-    "Practical recommendations",
-    "Healthcare-focused strategy",
-    "Real-world revenue cycle knowledge",
+    "Hands-On Operational Experience",
+    "Data-Driven Insights",
+    "Practical Recommendations",
+    "Healthcare-Focused Strategy",
+    "Real-World Revenue Cycle Knowledge",
 ];
 
 const experienceTags = [

@@ -1,11 +1,9 @@
 import { useState } from "react";
-import axios from "axios";
 import { useSEO } from "../lib/seo";
+import { submitForm } from "../lib/netlify";
 import PageHero from "../components/site/PageHero";
 import Reveal from "../components/site/Reveal";
 import { CheckCircle2, Calendar, Clock, ShieldCheck } from "lucide-react";
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const discussTopics = [
     "Revenue cycle performance concerns",
@@ -48,7 +46,7 @@ export default function BookCall() {
         }
         setSubmitting(true);
         try {
-            await axios.post(`${API}/booking`, form);
+            await submitForm({ formName: "booking", data: form, backendPath: "/booking" });
             setSuccess(true);
             setForm({ name: "", email: "", organization: "", phone: "", preferred_date: "", preferred_time: "", message: "" });
         } catch (err) {

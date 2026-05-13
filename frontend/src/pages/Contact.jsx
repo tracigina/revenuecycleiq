@@ -1,11 +1,9 @@
 import { useState } from "react";
-import axios from "axios";
 import { useSEO } from "../lib/seo";
+import { submitForm } from "../lib/netlify";
 import PageHero from "../components/site/PageHero";
 import Reveal from "../components/site/Reveal";
 import { CheckCircle2, Mail } from "lucide-react";
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 export default function Contact() {
     useSEO({
@@ -30,7 +28,7 @@ export default function Contact() {
         }
         setSubmitting(true);
         try {
-            await axios.post(`${API}/contact`, form);
+            await submitForm({ formName: "contact", data: form, backendPath: "/contact" });
             setSuccess(true);
             setForm({ name: "", email: "", organization: "", message: "" });
         } catch (err) {
