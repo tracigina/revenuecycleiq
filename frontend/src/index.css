@@ -82,6 +82,91 @@ body {
     .text-balance {
         text-wrap: balance;
     }
+
+    /* Animated underline for nav links */
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: 6px;
+        height: 2px;
+        background: linear-gradient(90deg, #0d9488, #14b8a6);
+        border-radius: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    .nav-link:hover::after,
+    .nav-link.is-active::after {
+        transform: scaleX(1);
+    }
+
+    /* Soft pulse ring around primary CTA */
+    .cta-pulse {
+        position: relative;
+        isolation: isolate;
+    }
+    .cta-pulse::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: 9999px;
+        background: rgba(13, 148, 136, 0.45);
+        z-index: -1;
+        opacity: 0;
+        transform: scale(1);
+        animation: cta-ring 2.6s ease-out infinite;
+    }
+    @keyframes cta-ring {
+        0% { opacity: 0.55; transform: scale(1); }
+        80% { opacity: 0; transform: scale(1.18); }
+        100% { opacity: 0; transform: scale(1.18); }
+    }
+
+    /* Subtle gradient shimmer for accent text */
+    .shimmer {
+        background: linear-gradient(90deg, #0d9488 0%, #5eead4 40%, #0d9488 80%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: shimmer-move 4s linear infinite;
+    }
+    @keyframes shimmer-move {
+        0% { background-position: 0% center; }
+        100% { background-position: 200% center; }
+    }
+
+    /* Underline-grow link */
+    .link-underline {
+        position: relative;
+    }
+    .link-underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        height: 1px;
+        width: 100%;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease;
+    }
+    .link-underline:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    /* Slow ambient drift used on decorative blobs */
+    @keyframes drift {
+        0%, 100% { transform: translate3d(0, 0, 0); }
+        50% { transform: translate3d(20px, -30px, 0); }
+    }
+    .animate-drift {
+        animation: drift 14s ease-in-out infinite;
+    }
 }
 
 @layer base {

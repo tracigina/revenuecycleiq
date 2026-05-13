@@ -14,6 +14,7 @@ import {
 import { useSEO } from "../lib/seo";
 import Reveal from "../components/site/Reveal";
 import CTASection from "../components/site/CTASection";
+import CountUp from "../components/site/CountUp";
 
 const services = [
     {
@@ -142,7 +143,7 @@ export default function Home() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
-                                className="mt-3 text-xl md:text-2xl font-serif italic text-teal-300"
+                                className="mt-3 text-xl md:text-2xl font-serif italic shimmer"
                             >
                                 Insights That Drive Revenue
                             </motion.p>
@@ -190,7 +191,9 @@ export default function Home() {
                                 data-testid="hero-stat-1"
                             >
                                 <div className="text-xs uppercase tracking-wider text-teal-700 font-bold">Experience</div>
-                                <div className="mt-2 text-5xl font-serif font-bold text-slate-900">24+</div>
+                                <div className="mt-2 text-5xl font-serif font-bold text-slate-900">
+                                    <CountUp end={24} suffix="+" />
+                                </div>
                                 <div className="mt-1 text-sm text-slate-600">Years of hands-on revenue cycle expertise</div>
                             </motion.div>
                             <motion.div
@@ -306,14 +309,20 @@ export default function Home() {
                         {services.map((s, i) => (
                             <Reveal key={s.title} delay={i * 0.05}>
                                 <div
-                                    className="group h-full bg-white rounded-2xl p-7 border border-slate-100 shadow-[0_2px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_50px_-12px_rgba(15,23,42,0.15)] hover:-translate-y-1 transition-all duration-300"
+                                    className="group relative h-full overflow-hidden bg-white rounded-2xl p-7 border border-slate-100 shadow-[0_2px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_50px_-12px_rgba(15,23,42,0.18)] hover:-translate-y-1.5 hover:border-teal-200 transition-all duration-500"
                                     data-testid={`service-card-${i}`}
                                 >
-                                    <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-5 group-hover:bg-teal-100 transition-colors">
-                                        <s.icon className="w-6 h-6 text-teal-700" strokeWidth={1.75} />
+                                    <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-teal-100/0 group-hover:bg-teal-100/60 blur-2xl transition-colors duration-500" aria-hidden />
+                                    <div className="relative">
+                                        <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-5 group-hover:bg-teal-100 group-hover:scale-110 group-hover:rotate-[-4deg] transition-all duration-500">
+                                            <s.icon className="w-6 h-6 text-teal-700" strokeWidth={1.75} />
+                                        </div>
+                                        <h3 className="text-xl font-serif font-bold text-slate-900">{s.title}</h3>
+                                        <p className="mt-3 text-sm text-slate-600 leading-relaxed">{s.desc}</p>
+                                        <div className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-teal-700 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+                                            Learn more <ArrowRight className="w-3.5 h-3.5" />
+                                        </div>
                                     </div>
-                                    <h3 className="text-xl font-serif font-bold text-slate-900">{s.title}</h3>
-                                    <p className="mt-3 text-sm text-slate-600 leading-relaxed">{s.desc}</p>
                                 </div>
                             </Reveal>
                         ))}
@@ -388,14 +397,19 @@ export default function Home() {
 
                     <Reveal delay={0.1}>
                         <div className="mt-12 flex flex-wrap gap-3">
-                            {experienceTags.map((tag) => (
-                                <span
+                            {experienceTags.map((tag, i) => (
+                                <motion.span
                                     key={tag}
-                                    className="inline-flex items-center bg-slate-50 hover:bg-teal-50 border border-slate-200 hover:border-teal-200 text-slate-800 hover:text-teal-800 text-sm font-semibold px-5 py-3 rounded-full transition-colors cursor-default"
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: i * 0.04, ease: "easeOut" }}
+                                    whileHover={{ y: -3, scale: 1.04 }}
+                                    className="inline-flex items-center bg-slate-50 hover:bg-teal-50 border border-slate-200 hover:border-teal-300 text-slate-800 hover:text-teal-800 text-sm font-semibold px-5 py-3 rounded-full transition-colors cursor-default shadow-sm hover:shadow-md"
                                     data-testid={`experience-tag-${tag.toLowerCase().replace(/\s+/g, "-")}`}
                                 >
                                     {tag}
-                                </span>
+                                </motion.span>
                             ))}
                         </div>
                     </Reveal>
@@ -418,10 +432,11 @@ export default function Home() {
                         {approachSteps.map((step, i) => (
                             <Reveal key={step.n} delay={i * 0.08}>
                                 <div
-                                    className="relative h-full bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow"
+                                    className="group relative h-full bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden"
                                     data-testid={`approach-step-${i + 1}`}
                                 >
-                                    <div className="text-5xl font-serif font-bold text-teal-600/30 leading-none">{step.n}</div>
+                                    <div className="absolute inset-x-0 -top-px h-[3px] bg-gradient-to-r from-teal-500 via-teal-400 to-sky-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" aria-hidden />
+                                    <div className="text-5xl font-serif font-bold text-teal-600/30 group-hover:text-teal-600/60 leading-none transition-colors duration-500">{step.n}</div>
                                     <h3 className="mt-4 text-xl font-serif font-bold text-slate-900">{step.title}</h3>
                                     <p className="mt-3 text-sm text-slate-600 leading-relaxed">{step.desc}</p>
                                 </div>

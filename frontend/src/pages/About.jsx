@@ -2,6 +2,7 @@ import { useSEO } from "../lib/seo";
 import PageHero from "../components/site/PageHero";
 import Reveal from "../components/site/Reveal";
 import CTASection from "../components/site/CTASection";
+import CountUp from "../components/site/CountUp";
 import { Users, GitBranch, Cpu, Building2, Workflow, BarChart3, ShieldCheck, TrendingUp } from "lucide-react";
 
 const differentiators = [
@@ -56,11 +57,13 @@ export default function About() {
                     </Reveal>
 
                     <Reveal className="lg:col-span-5" delay={0.15}>
-                        <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 sticky top-28">
+                        <div className="bg-white rounded-3xl p-8 border border-slate-100 sticky top-28">
                             <div className="text-xs uppercase tracking-[0.2em] font-bold text-teal-700">At a Glance</div>
                             <div className="mt-5 space-y-5">
                                 <div>
-                                    <div className="text-4xl font-serif font-bold text-slate-900">24+</div>
+                                    <div className="text-4xl font-serif font-bold text-slate-900">
+                                        <CountUp end={24} suffix="+" />
+                                    </div>
                                     <div className="text-sm text-slate-600 mt-1">Years of revenue cycle experience</div>
                                 </div>
                                 <div className="h-px bg-slate-200" />

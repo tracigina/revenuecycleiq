@@ -35,13 +35,20 @@ export default function Header() {
                     : "bg-white/80 backdrop-blur-sm border-b border-transparent"
             }`}
         >
-            <div className="container-rc flex items-center justify-between h-20">
-                <Link to="/" className="flex items-center gap-3" data-testid="header-logo-link" aria-label="Revenue Cycle IQ home">
-                    <img src={LOGO_URL} alt="Revenue Cycle IQ logo" className="h-12 w-12 object-contain" />
-                    <div className="hidden sm:flex flex-col leading-none">
-                        <span className="font-serif font-bold text-lg text-slate-900 tracking-tight">Revenue Cycle IQ</span>
-                        <span className="text-[10px] uppercase tracking-[0.18em] text-teal-700 font-semibold mt-0.5">Insights That Drive Revenue</span>
-                    </div>
+            <div className="container-rc flex items-center justify-between h-20 overflow-visible">
+                <Link
+                    to="/"
+                    className="group flex items-center gap-3 overflow-visible"
+                    data-testid="header-logo-link"
+                    aria-label="Revenue Cycle IQ home"
+                >
+                    <span className="block -my-4 transition-transform duration-500 ease-out group-hover:scale-[1.04] group-hover:-rotate-1">
+                        <img
+                            src={LOGO_URL}
+                            alt="Revenue Cycle IQ logo"
+                            className="h-28 w-28 sm:h-32 sm:w-32 object-contain drop-shadow-sm"
+                        />
+                    </span>
                 </Link>
 
                 <nav className="hidden lg:flex items-center gap-1" aria-label="Primary navigation">
@@ -52,10 +59,8 @@ export default function Header() {
                             end={item.to === "/"}
                             data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
                             className={({ isActive }) =>
-                                `px-4 py-2 text-sm font-semibold rounded-full transition-colors ${
-                                    isActive
-                                        ? "text-teal-700 bg-teal-50"
-                                        : "text-slate-700 hover:text-teal-700 hover:bg-slate-50"
+                                `nav-link relative px-4 py-2 text-sm font-semibold transition-colors ${
+                                    isActive ? "text-teal-700 is-active" : "text-slate-700 hover:text-teal-700"
                                 }`
                             }
                         >
@@ -66,8 +71,8 @@ export default function Header() {
                         to="/contact"
                         data-testid="nav-link-contact"
                         className={({ isActive }) =>
-                            `px-4 py-2 text-sm font-semibold rounded-full transition-colors ${
-                                isActive ? "text-teal-700 bg-teal-50" : "text-slate-700 hover:text-teal-700 hover:bg-slate-50"
+                            `nav-link relative px-4 py-2 text-sm font-semibold transition-colors ${
+                                isActive ? "text-teal-700 is-active" : "text-slate-700 hover:text-teal-700"
                             }`
                         }
                     >
@@ -76,9 +81,9 @@ export default function Header() {
                     <Link
                         to="/book-a-call"
                         data-testid="nav-book-a-call-cta"
-                        className="ml-3 inline-flex items-center bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors shadow-sm"
+                        className="ml-3 relative inline-flex items-center bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-[0_0_0_4px_rgba(13,148,136,0.15)] hover:-translate-y-0.5 cta-pulse"
                     >
-                        Book a Call
+                        <span className="relative z-10">Book a Call</span>
                     </Link>
                 </nav>
 

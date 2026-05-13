@@ -16,12 +16,12 @@ export default function Footer() {
             <div className="container-rc py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <div className="md:col-span-1">
-                        <div className="inline-flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm">
-                            <img src={LOGO_URL} alt="Revenue Cycle IQ logo" className="h-12 w-12 object-contain" />
-                            <div className="leading-tight">
-                                <div className="font-serif font-bold text-slate-900 text-lg">Revenue Cycle IQ</div>
-                                <div className="text-[10px] uppercase tracking-[0.18em] text-teal-700 font-semibold mt-0.5">Insights That Drive Revenue</div>
-                            </div>
+                        <div className="inline-block bg-white rounded-2xl p-4 shadow-lg transition-transform duration-500 hover:scale-[1.02] hover:-rotate-1">
+                            <img
+                                src={LOGO_URL}
+                                alt="Revenue Cycle IQ logo"
+                                className="h-32 w-32 sm:h-36 sm:w-36 object-contain"
+                            />
                         </div>
                         <p className="mt-6 text-sm text-slate-400 leading-relaxed max-w-md">
                             Helping healthcare organizations improve financial performance through smarter revenue cycle strategy, analytics, and operational improvement.
