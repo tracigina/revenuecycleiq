@@ -74,16 +74,18 @@ const whyBullets = [
 ];
 
 const experienceTags = [
-    "Professional billing",
-    "Hospital revenue cycle",
-    "Behavioral health revenue cycle",
-    "Front-end operations",
-    "Billing and claims",
-    "Denial management",
-    "Insurance follow-up",
-    "Patient collections",
-    "Operational leadership",
-    "Revenue cycle analytics",
+    "Professional Billing",
+    "Hospital Revenue Cycle",
+    "Behavioral Health Revenue Cycle",
+    "Front-End Operations",
+    "Billing & Claims",
+    "Denial Management",
+    "Insurance Follow-Up",
+    "Patient Collections",
+    "Payment Posting",
+    "Global Workforce Strategy",
+    "Operational Leadership",
+    "Revenue Cycle Analytics",
 ];
 
 const approachSteps = [
