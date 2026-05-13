@@ -1,0 +1,157 @@
+{
+  "project_info": {
+    "name": "Revenue Cycle IQ",
+    "tagline": "Insights That Drive Revenue",
+    "domain": "Healthcare Revenue Cycle Consulting",
+    "app_type": "marketing_site"
+  },
+  "brand_identity": {
+    "theme": "Light",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) adapted for Professional/Trust (Archetype 1)",
+    "mood": "Trustworthy, executive-level, analytical, modern business"
+  },
+  "colors": {
+    "primary": "#0F172A", 
+    "secondary": "#0D9488", 
+    "accent": "#BAE6FD",
+    "background_light": "#F8FAFC",
+    "background_white": "#FFFFFF",
+    "text_main": "#0F172A",
+    "text_muted": "#475569"
+  },
+  "typography": {
+    "font_pairings": {
+      "heading": "Playfair Display",
+      "body": "Plus Jakarta Sans"
+    },
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
+    "rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-7xl tracking-tight font-bold font-serif text-slate-900",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight font-semibold font-serif text-slate-900",
+      "h3": "text-xl sm:text-2xl font-semibold font-serif text-slate-900",
+      "body": "text-base md:text-lg font-sans leading-relaxed text-slate-600",
+      "buttons_labels": "text-sm uppercase tracking-[0.1em] font-bold font-sans"
+    }
+  },
+  "components": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_58ef0580-04f6-46a7-9c66-26e38b2ee4ea/artifacts/kyjixs4r_97e2c4e1-7534-4853-9678-217fc1985d65.png",
+      "handling": "Needs white rounded container (bg-white rounded-xl p-2) when placed on dark navy sections. Otherwise display normally."
+    },
+    "cards": {
+      "style": "bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
+    },
+    "buttons": {
+      "primary": "bg-teal-700 hover:bg-teal-800 text-white rounded-full px-8 py-4 transition-colors font-semibold",
+      "secondary": "bg-slate-900 hover:bg-slate-800 text-white rounded-full px-8 py-4 transition-colors font-semibold",
+      "outline": "border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white rounded-full px-8 py-4 transition-colors font-semibold"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "text-teal-700 w-8 h-8 stroke-[1.5px]"
+    }
+  },
+  "layout_and_spacing": {
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12",
+    "grid_gaps": "gap-8 lg:gap-12"
+  },
+  "animations": {
+    "hero": "Fade-in text and floating data cards using framer-motion. Cards should have gentle floating y-axis animations.",
+    "scroll": "Subtle fade-up scroll animations on section entry.",
+    "hover": "Cards lift slightly on hover (-translate-y-1) with increased shadow."
+  },
+  "pages_and_sections": [
+    {
+      "page": "Home",
+      "sections": [
+        "Hero: Fade-in text, CTA, floating stat chips (24+ Years Experience, Denial Reduction Strategy, Revenue Cycle Analytics), overlaid on dark navy/teal background image.",
+        "What We Do: Side-by-side layout (Intro text + Visual).",
+        "Services: 6-card grid with icons, concise titles and descriptions.",
+        "Why Revenue Cycle IQ: Navy contrast background with white text, highlighting core benefits.",
+        "Experience That Matters: Tag grid showing expertise areas (e.g., Epic, Cerner, Denials, coding).",
+        "Approach: 4 numbered cards indicating process steps (Discovery, Analysis, Strategy, Execution).",
+        "Global CTA: Large banner encouraging to Book a Call."
+      ]
+    },
+    {
+      "page": "About",
+      "sections": [
+        "Hero: Title + subtitle.",
+        "Mission & Vision: Text blocks with generous spacing.",
+        "Team/Leadership (Optional placeholders if needed)."
+      ]
+    },
+    {
+      "page": "Services",
+      "sections": [
+        "Hero: Highlighting consulting expertise.",
+        "Detailed Services List: Expanded view of the 6 services from Home page."
+      ]
+    },
+    {
+      "page": "Why Revenue Cycle IQ",
+      "sections": [
+        "Hero: Differentiators.",
+        "Deep Dive into Analytics, Strategy, and Execution."
+      ]
+    },
+    {
+      "page": "Book a Call",
+      "sections": [
+        "Booking Form: Name, Email, Organization, Phone, Preferred Date, Preferred Time, Message."
+      ]
+    },
+    {
+      "page": "Contact",
+      "sections": [
+        "Contact Form: Name, Email, Organization, Message.",
+        "Contact Info: Address, Phone, Email."
+      ]
+    }
+  ],
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      "description": "Healthcare analytics dashboard on laptop. Use with a heavy deep navy gradient overlay (e.g., from-slate-900/90 to-slate-900/60) to ensure text contrast."
+    },
+    "what_we_do": {
+      "url": "https://images.pexels.com/photos/5206922/pexels-photo-5206922.jpeg",
+      "description": "Nurse in green scrubs holding tablet and stethoscope."
+    },
+    "experience_section": {
+      "url": "https://images.unsplash.com/photo-1551135049-8a33b5883817",
+      "description": "Professionals analyzing papers/data in meeting."
+    },
+    "about_hero": {
+      "url": "https://images.unsplash.com/photo-1765020553734-2c050ddb9494",
+      "description": "Business consulting meeting, engaging discussion."
+    },
+    "services_hero": {
+      "url": "https://images.unsplash.com/photo-1686061592689-312bbfb5c055",
+      "description": "Computer screen with bar chart analytics."
+    },
+    "contact_hero": {
+      "url": "https://images.pexels.com/photos/5452188/pexels-photo-5452188.jpeg",
+      "description": "Female doctor using tablet indoors."
+    }
+  },
+  "forms": {
+    "booking": "Fields: Name, Email, Organization, Phone, Preferred Date, Preferred Time, Message. Use modern inputs with clear labels.",
+    "contact": "Fields: Name, Email, Organization, Message."
+  },
+  "accessibility_and_testing": {
+    "data_testid": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "Install lucide-react, framer-motion, react-router-dom, and standard Shadcn components.",
+    "Ensure global typography overrides use Playfair Display for headings and Plus Jakarta Sans for body.",
+    "Setup routing for the 6 pages (Home, About, Services, Why Revenue Cycle IQ, Book a Call, Contact).",
+    "Implement a sticky header that changes style on scroll (transparent at top, white background with shadow on scroll). Includes mobile hamburger menu.",
+    "In dark sections (like 'Why Revenue Cycle IQ' or Hero with navy overlay), WRAP the logo image in a white container (`bg-white rounded-xl p-2 inline-block`) to ensure visibility, since the logo has dark text.",
+    "Implement the Booking form with Shadcn components or styled HTML elements (use proper date/time selection UI).",
+    "Use framer-motion to create floating stat cards in the hero section.",
+    "Implement a back-to-top button in the footer or fixed to the bottom right.",
+    "Add `data-testid` to all CTA buttons, form inputs, and nav links."
+  ]
+}
