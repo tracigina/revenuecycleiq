@@ -89,8 +89,8 @@ export default function About() {
                     <Reveal>
                         <div className="relative h-full min-h-[400px] lg:min-h-[700px]">
                             <img
-                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
-                                alt="Healthcare leadership team reviewing revenue cycle performance dashboards in a strategy meeting"
+                                src="https://customer-assets.emergentagent.com/job_revenue-insights-72/artifacts/y2igoa6c_0.png"
+                                alt="Revenue Cycle IQ consultant presenting DSO performance drivers dashboard to a healthcare leadership team"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/10 via-transparent to-transparent" aria-hidden />
