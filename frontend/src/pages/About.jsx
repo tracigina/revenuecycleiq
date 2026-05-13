@@ -87,13 +87,12 @@ export default function About() {
                 <div className="grid lg:grid-cols-2 min-h-[640px]">
                     {/* Left: photo */}
                     <Reveal>
-                        <div className="relative h-full min-h-[400px] lg:min-h-[700px]">
+                        <div className="relative h-full min-h-[420px] lg:min-h-[760px] bg-slate-100">
                             <img
                                 src="https://customer-assets.emergentagent.com/job_revenue-insights-72/artifacts/y2igoa6c_0.png"
                                 alt="Revenue Cycle IQ consultant presenting DSO performance drivers dashboard to a healthcare leadership team"
-                                className="absolute inset-0 w-full h-full object-cover"
+                                className="absolute inset-0 w-full h-full object-contain object-center"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/10 via-transparent to-transparent" aria-hidden />
                         </div>
                     </Reveal>
 
