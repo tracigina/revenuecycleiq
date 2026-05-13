@@ -9,15 +9,19 @@ import {
     Workflow,
     BarChart3,
     Cpu,
+    Network,
+    FileText,
+    Repeat,
+    Bot,
     CheckCircle2,
 } from "lucide-react";
 
 const services = [
     {
         icon: LineChart,
-        title: "Revenue Cycle Assessment",
+        title: "Revenue Cycle Assessments",
         intro:
-            "A detailed review of current workflows, system usage, staffing structure, reporting, KPIs, and operational performance.",
+            "Comprehensive evaluations of workflows, KPIs, denials, aging A/R, operational inefficiencies, and financial performance opportunities.",
         bullets: [
             "Workflow review",
             "Staffing and accountability review",
@@ -29,9 +33,9 @@ const services = [
     },
     {
         icon: TrendingDown,
-        title: "Denial Management Review",
+        title: "Denial Management Strategy",
         intro:
-            "Identify denial trends, root causes, avoidable write-offs, front-end issues, authorization gaps, eligibility issues, and payor-related patterns.",
+            "Identifying denial trends and root causes while implementing proactive strategies to improve first-pass resolution and reduce revenue leakage.",
         bullets: [
             "Denial trend analysis",
             "Root cause review",
@@ -57,9 +61,9 @@ const services = [
     },
     {
         icon: Workflow,
-        title: "Workflow Transformation",
+        title: "Workflow Optimization",
         intro:
-            "Evaluate current workflows and recommend improvements to reduce manual work, improve accountability, and increase efficiency.",
+            "Streamlining revenue cycle processes to improve operational efficiency, accountability, productivity, and collections performance.",
         bullets: [
             "Manual process review",
             "Workflow redesign",
@@ -71,9 +75,9 @@ const services = [
     },
     {
         icon: BarChart3,
-        title: "KPI Dashboard Review",
+        title: "KPI & Analytics Development",
         intro:
-            "Assess whether leadership has the right metrics, definitions, dashboards, and reporting cadence to manage performance effectively.",
+            "Creating meaningful dashboards, scorecards, and reporting structures that provide actionable operational insights and performance visibility.",
         bullets: [
             "KPI definition review",
             "Dashboard quality review",
@@ -84,6 +88,62 @@ const services = [
         ],
     },
     {
+        icon: Network,
+        title: "Clearinghouse & EDI Optimization",
+        intro:
+            "Supporting clearinghouse implementations, payer enrollments, ERA/EFT setup, claim submission optimization, and workflow automation opportunities.",
+        bullets: [
+            "Clearinghouse evaluation",
+            "Payer enrollment support",
+            "ERA / EFT setup",
+            "Claim submission optimization",
+            "Edits and rejection review",
+            "EDI workflow automation",
+        ],
+    },
+    {
+        icon: FileText,
+        title: "SOP Development",
+        intro:
+            "Building standardized operating procedures and operational workflows across all revenue cycle functions.",
+        bullets: [
+            "Function-by-function SOPs",
+            "Documented workflows",
+            "Quality and audit checklists",
+            "Onboarding and training assets",
+            "Cross-team handoff playbooks",
+            "Operational standardization",
+        ],
+    },
+    {
+        icon: Repeat,
+        title: "Revenue Cycle Operational Transformation",
+        intro:
+            "Helping organizations redesign workflows, improve processes, strengthen accountability, and optimize operational performance.",
+        bullets: [
+            "Current-state diagnostic",
+            "Workflow redesign",
+            "Accountability framework",
+            "Productivity and quality KPIs",
+            "Change management roadmap",
+            "Performance optimization",
+        ],
+    },
+    {
+        icon: Bot,
+        title: "AI & Automation Strategy",
+        intro:
+            "Evaluating opportunities for workflow automation, operational efficiencies, and AI-driven revenue cycle improvements.",
+        bullets: [
+            "Automation opportunity assessment",
+            "Bot / RPA use-case mapping",
+            "AI-assisted denial workflows",
+            "Eligibility and authorization automation",
+            "Reporting automation",
+            "Vendor and tooling evaluation",
+        ],
+    },
+    {
         icon: Cpu,
         title: "System Utilization Review",
         intro:
@@ -91,9 +151,9 @@ const services = [
         bullets: [
             "System usage review",
             "Configuration opportunity review",
-            "Clearinghouse process review",
             "Workflow-system alignment",
             "Reporting capabilities review",
+            "User adoption review",
             "Optimization recommendations",
         ],
     },
@@ -133,7 +193,7 @@ export default function Services() {
                                                 <s.icon className="w-7 h-7 text-teal-700" strokeWidth={1.75} />
                                             </div>
                                             <span className="text-xs uppercase tracking-[0.22em] font-bold text-teal-700">
-                                                0{i + 1} / 06
+                                                {String(i + 1).padStart(2, "0")} / 10
                                             </span>
                                         </div>
                                         <h2 className="mt-5 text-3xl sm:text-4xl font-serif font-bold text-slate-900 leading-tight">

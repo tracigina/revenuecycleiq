@@ -82,24 +82,70 @@ export default function About() {
                 </div>
             </section>
 
-            {/* What Makes Us Different */}
-            <section className="section-padding bg-slate-900 text-white relative overflow-hidden" data-testid="about-different">
-                <div className="absolute -top-32 -right-32 w-[36rem] h-[36rem] rounded-full bg-teal-500/10 blur-3xl" aria-hidden />
-                <div className="container-rc relative">
+            {/* What Makes Us Different — split-screen */}
+            <section className="relative" data-testid="about-different">
+                <div className="grid lg:grid-cols-2 min-h-[640px]">
+                    {/* Left: photo */}
+                    <Reveal>
+                        <div className="relative h-full min-h-[400px] lg:min-h-[700px]">
+                            <img
+                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
+                                alt="Healthcare leadership team reviewing revenue cycle performance dashboards in a strategy meeting"
+                                className="absolute inset-0 w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/10 via-transparent to-transparent" aria-hidden />
+                        </div>
+                    </Reveal>
+
+                    {/* Right: navy bold panel */}
+                    <div className="bg-slate-900 text-white relative overflow-hidden">
+                        <div className="absolute -top-32 -right-24 w-[28rem] h-[28rem] rounded-full bg-teal-500/12 blur-3xl animate-drift" aria-hidden />
+                        <div className="absolute -bottom-40 -left-16 w-[28rem] h-[28rem] rounded-full bg-sky-500/8 blur-3xl" aria-hidden />
+
+                        <div className="relative h-full px-8 sm:px-12 lg:px-16 py-16 lg:py-24 flex flex-col justify-center">
+                            <Reveal>
+                                <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-300">
+                                    What Makes Us Different
+                                </span>
+                                <h2 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-sans font-extrabold text-white leading-[1.05] tracking-tight">
+                                    What Makes<br />
+                                    Revenue Cycle IQ<br />
+                                    <span className="text-teal-300">Different</span>
+                                </h2>
+                            </Reveal>
+
+                            <Reveal delay={0.1}>
+                                <div className="mt-8 space-y-5 text-base md:text-lg text-slate-300 leading-relaxed max-w-xl">
+                                    <p>
+                                        Revenue Cycle IQ is built on more than <span className="text-white font-semibold">24 years of hands-on healthcare revenue cycle experience</span> across every stage of the revenue cycle.
+                                    </p>
+                                    <p>
+                                        Unlike many consulting firms that operate solely from a high-level management perspective, Revenue Cycle IQ brings real operational knowledge from working directly within front-end operations, insurance verification, billing, payment posting, denials management, collections, analytics, and executive leadership.
+                                    </p>
+                                    <p>
+                                        This unique perspective — combined with experience across <span className="text-white font-semibold">professional services, hospital, and behavioral health</span> organizations — provides a deeper understanding of operational workflows, payor behavior, revenue cycle challenges, and the practical strategies needed to drive measurable financial improvement.
+                                    </p>
+                                </div>
+                            </Reveal>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Pillars grid */}
+            <section className="section-padding bg-white" data-testid="about-pillars">
+                <div className="container-rc">
                     <Reveal>
                         <div className="max-w-3xl">
-                            <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-300">What Makes Us Different</span>
-                            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
+                            <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-700">
+                                The Full Story
+                            </span>
+                            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-900 leading-tight">
                                 We don't just look at numbers.
                             </h2>
-                            <div className="mt-7 space-y-5 text-base md:text-lg text-slate-300 leading-relaxed">
-                                <p>
-                                    We look at the full revenue cycle story: people, process, systems, payors, workflows, reporting, and accountability.
-                                </p>
-                                <p>
-                                    Our goal is to help organizations understand what is happening, why it is happening, and what needs to change to improve performance.
-                                </p>
-                            </div>
+                            <p className="mt-5 text-base md:text-lg text-slate-600 leading-relaxed">
+                                We look at the full revenue cycle story — people, process, systems, payors, workflows, reporting, and accountability. Our goal is to help organizations understand what is happening, why it is happening, and what needs to change to improve performance.
+                            </p>
                         </div>
                     </Reveal>
 
@@ -107,13 +153,13 @@ export default function About() {
                         {differentiators.map((d, i) => (
                             <Reveal key={d.label} delay={i * 0.05}>
                                 <div
-                                    className="bg-white/5 hover:bg-white/10 backdrop-blur border border-white/10 rounded-2xl p-6 transition-colors text-center"
+                                    className="group bg-slate-50 hover:bg-white border border-slate-100 hover:border-teal-200 rounded-2xl p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 text-center"
                                     data-testid={`differentiator-${d.label.toLowerCase()}`}
                                 >
-                                    <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center mx-auto">
-                                        <d.icon className="w-6 h-6 text-teal-300" strokeWidth={1.75} />
+                                    <div className="w-12 h-12 rounded-xl bg-teal-50 group-hover:bg-teal-100 flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-500">
+                                        <d.icon className="w-6 h-6 text-teal-700" strokeWidth={1.75} />
                                     </div>
-                                    <div className="mt-4 text-base font-bold text-white">{d.label}</div>
+                                    <div className="mt-4 text-base font-bold text-slate-900">{d.label}</div>
                                 </div>
                             </Reveal>
                         ))}

@@ -10,6 +10,10 @@ import {
     Cpu,
     CheckCircle2,
     Sparkles,
+    Network,
+    FileText,
+    Repeat,
+    Bot,
 } from "lucide-react";
 import { useSEO } from "../lib/seo";
 import Reveal from "../components/site/Reveal";
@@ -19,33 +23,43 @@ import CountUp from "../components/site/CountUp";
 const services = [
     {
         icon: LineChart,
-        title: "Revenue Cycle Assessment",
-        desc: "A full review of your current revenue cycle operations, including workflows, systems, staffing, reporting, and performance metrics.",
-    },
-    {
-        icon: TrendingDown,
-        title: "Denial Reduction Strategy",
-        desc: "Identify root causes of denials and develop practical strategies to reduce avoidable write-offs and improve first-pass resolution.",
+        title: "Revenue Cycle Assessments",
+        desc: "Comprehensive evaluations of workflows, KPIs, denials, aging A/R, operational inefficiencies, and financial performance opportunities.",
     },
     {
         icon: Workflow,
         title: "Workflow Optimization",
-        desc: "Streamline manual processes, improve accountability, and create more efficient revenue cycle workflows across departments.",
+        desc: "Streamlining revenue cycle processes to improve operational efficiency, accountability, productivity, and collections performance.",
+    },
+    {
+        icon: TrendingDown,
+        title: "Denial Management Strategy",
+        desc: "Identifying denial trends and root causes while implementing proactive strategies to improve first-pass resolution and reduce revenue leakage.",
     },
     {
         icon: BarChart3,
-        title: "KPI & Reporting Review",
-        desc: "Review key performance indicators, dashboards, and reporting processes to ensure leadership has clear visibility into performance.",
+        title: "KPI & Analytics Development",
+        desc: "Creating meaningful dashboards, scorecards, and reporting structures that provide actionable operational insights and performance visibility.",
     },
     {
-        icon: ShieldCheck,
-        title: "Payor & A/R Performance Review",
-        desc: "Analyze payor trends, aging accounts receivable, underpayments, denial patterns, and collection barriers.",
+        icon: Network,
+        title: "Clearinghouse & EDI Optimization",
+        desc: "Supporting clearinghouse implementations, payer enrollments, ERA/EFT setup, claim submission optimization, and workflow automation opportunities.",
     },
     {
-        icon: Cpu,
-        title: "System & Process Advisory",
-        desc: "Evaluate whether current systems are being fully used or whether workflow, configuration, or clearinghouse improvements are needed.",
+        icon: FileText,
+        title: "SOP Development",
+        desc: "Building standardized operating procedures and operational workflows across all revenue cycle functions.",
+    },
+    {
+        icon: Repeat,
+        title: "Revenue Cycle Operational Transformation",
+        desc: "Helping organizations redesign workflows, improve processes, strengthen accountability, and optimize operational performance.",
+    },
+    {
+        icon: Bot,
+        title: "AI & Automation Strategy",
+        desc: "Evaluating opportunities for workflow automation, operational efficiencies, and AI-driven revenue cycle improvements.",
     },
 ];
 
@@ -305,21 +319,21 @@ export default function Home() {
                         </div>
                     </Reveal>
 
-                    <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                         {services.map((s, i) => (
-                            <Reveal key={s.title} delay={i * 0.05}>
+                            <Reveal key={s.title} delay={i * 0.04}>
                                 <div
-                                    className="group relative h-full overflow-hidden bg-white rounded-2xl p-7 border border-slate-100 shadow-[0_2px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_50px_-12px_rgba(15,23,42,0.18)] hover:-translate-y-1.5 hover:border-teal-200 transition-all duration-500"
+                                    className="group relative h-full overflow-hidden bg-white rounded-2xl p-6 border border-slate-100 shadow-[0_2px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_50px_-12px_rgba(15,23,42,0.18)] hover:-translate-y-1.5 hover:border-teal-200 transition-all duration-500"
                                     data-testid={`service-card-${i}`}
                                 >
                                     <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-teal-100/0 group-hover:bg-teal-100/60 blur-2xl transition-colors duration-500" aria-hidden />
                                     <div className="relative">
-                                        <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-5 group-hover:bg-teal-100 group-hover:scale-110 group-hover:rotate-[-4deg] transition-all duration-500">
-                                            <s.icon className="w-6 h-6 text-teal-700" strokeWidth={1.75} />
+                                        <div className="w-11 h-11 rounded-xl bg-teal-50 flex items-center justify-center mb-5 group-hover:bg-teal-100 group-hover:scale-110 group-hover:rotate-[-4deg] transition-all duration-500">
+                                            <s.icon className="w-5 h-5 text-teal-700" strokeWidth={1.75} />
                                         </div>
-                                        <h3 className="text-xl font-serif font-bold text-slate-900">{s.title}</h3>
+                                        <h3 className="text-lg font-serif font-bold text-slate-900 leading-tight">{s.title}</h3>
                                         <p className="mt-3 text-sm text-slate-600 leading-relaxed">{s.desc}</p>
-                                        <div className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-teal-700 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+                                        <div className="mt-5 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-teal-700 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
                                             Learn more <ArrowRight className="w-3.5 h-3.5" />
                                         </div>
                                     </div>
