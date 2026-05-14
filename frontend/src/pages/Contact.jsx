@@ -55,11 +55,11 @@ export default function Contact() {
                         <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-10 relative overflow-hidden">
                             <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-teal-500/15 blur-3xl" aria-hidden />
                             <div className="relative">
-                                <div className="inline-block rounded-xl ring-1 ring-slate-200 overflow-hidden bg-white">
+                                <div className="inline-block rounded-xl ring-1 ring-slate-200 overflow-hidden bg-white shadow-lg">
                                     <img
                                         src="https://customer-assets.emergentagent.com/job_revenue-insights-72/artifacts/t3lsnefp_8cb78bd4-031c-4fd3-ad7f-0aadd0613e88-1.png"
                                         alt="Revenue Cycle IQ logo"
-                                        className="h-20 w-auto object-contain"
+                                        className="h-32 sm:h-36 w-auto object-contain"
                                     />
                                 </div>
 

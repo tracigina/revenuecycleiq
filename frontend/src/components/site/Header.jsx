@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { LOGO_URL } from "../../lib/seo";
 
 const NAV = [
     { to: "/", label: "Home" },
@@ -38,19 +37,18 @@ export default function Header() {
             <div className="container-rc flex items-center justify-between h-20 overflow-visible">
                 <Link
                     to="/"
-                    className="group flex items-center gap-3 overflow-visible"
+                    className="group flex items-center gap-2 overflow-visible"
                     data-testid="header-logo-link"
                     aria-label="Revenue Cycle IQ home"
                 >
-                    <span className="block transition-transform duration-500 ease-out group-hover:scale-[1.04] group-hover:-rotate-1">
-                        <span className="block rounded-xl bg-white ring-1 ring-slate-200 shadow-[0_4px_14px_-6px_rgba(15,23,42,0.18)] overflow-hidden">
-                            <img
-                                src={LOGO_URL}
-                                alt="Revenue Cycle IQ logo"
-                                className="h-16 w-auto object-contain"
-                            />
+                    <div className="flex flex-col leading-none">
+                        <span className="font-serif font-bold text-lg sm:text-xl text-slate-900 tracking-tight transition-colors group-hover:text-teal-700">
+                            Revenue Cycle IQ
                         </span>
-                    </span>
+                        <span className="text-[10px] uppercase tracking-[0.18em] text-teal-700 font-semibold mt-1">
+                            Insights That Drive Revenue
+                        </span>
+                    </div>
                 </Link>
 
                 <nav className="hidden lg:flex items-center gap-1" aria-label="Primary navigation">

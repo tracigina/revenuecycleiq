@@ -20,7 +20,7 @@ export default function Footer() {
                             <img
                                 src={LOGO_URL}
                                 alt="Revenue Cycle IQ logo"
-                                className="h-28 sm:h-32 w-auto object-contain"
+                                className="h-36 sm:h-44 w-auto object-contain"
                             />
                         </div>
                         <p className="mt-6 text-sm text-slate-400 leading-relaxed max-w-md">

@@ -147,23 +147,25 @@ export default function Home() {
                                 Healthcare Revenue Cycle Consulting
                             </motion.span>
 
-                            <motion.h1
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.1 }}
-                                className="mt-5 text-4xl sm:text-5xl lg:text-7xl font-serif font-bold text-white leading-[1.02] tracking-tight"
+                            {/* Big hero logo — replaces the H1 text wordmark */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20, scale: 0.96 }}
+                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
+                                className="mt-6"
+                                data-testid="hero-logo"
                             >
-                                Revenue Cycle IQ
-                            </motion.h1>
+                                <div className="inline-block rounded-2xl bg-white shadow-[0_24px_60px_-20px_rgba(0,0,0,0.45)] ring-1 ring-white/20 overflow-hidden">
+                                    <img
+                                        src="https://customer-assets.emergentagent.com/job_revenue-insights-72/artifacts/t3lsnefp_8cb78bd4-031c-4fd3-ad7f-0aadd0613e88-1.png"
+                                        alt="Revenue Cycle IQ — Insights That Drive Revenue"
+                                        className="h-44 sm:h-52 lg:h-60 w-auto object-contain"
+                                    />
+                                </div>
+                            </motion.div>
 
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
-                                className="mt-3 text-xl md:text-2xl font-serif italic shimmer"
-                            >
-                                Insights That Drive Revenue
-                            </motion.p>
+                            {/* SEO H1 (kept for crawlers, visually hidden) */}
+                            <h1 className="sr-only">Revenue Cycle IQ — Insights That Drive Revenue</h1>
 
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
