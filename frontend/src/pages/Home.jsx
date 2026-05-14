@@ -114,9 +114,10 @@ const approachSteps = [
 
 export default function Home() {
     useSEO({
-        title: "Revenue Cycle IQ | Healthcare Revenue Cycle Consulting & Optimization",
+        title: "Revenue Cycle IQ — Insights That Drive Revenue",
         description:
-            "Revenue Cycle IQ helps healthcare organizations improve financial performance through revenue cycle optimization, analytics, workflow transformation, denial reduction, and operational intelligence.",
+            "Revenue Cycle IQ — Insights That Drive Revenue. Helping organizations strengthen financial performance through revenue cycle optimization, analytics, workflow transformation, denial reduction, and operational intelligence.",
+        canonical: "https://therevenuecycleiq.com/",
     });
 
     return (
