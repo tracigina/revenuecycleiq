@@ -42,12 +42,12 @@ export default function Header() {
                     data-testid="header-logo-link"
                     aria-label="Revenue Cycle IQ home"
                 >
-                    <span className="block -my-3 transition-transform duration-500 ease-out group-hover:scale-[1.04] group-hover:-rotate-1">
-                        <span className="block rounded-xl bg-white ring-1 ring-slate-200 shadow-[0_6px_18px_-8px_rgba(15,23,42,0.22)] overflow-hidden">
+                    <span className="block transition-transform duration-500 ease-out group-hover:scale-[1.04] group-hover:-rotate-1">
+                        <span className="block rounded-xl bg-white ring-1 ring-slate-200 shadow-[0_4px_14px_-6px_rgba(15,23,42,0.18)] overflow-hidden">
                             <img
                                 src={LOGO_URL}
                                 alt="Revenue Cycle IQ logo"
-                                className="h-[104px] w-auto object-contain"
+                                className="h-16 w-auto object-contain"
                             />
                         </span>
                     </span>
