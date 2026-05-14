@@ -12,7 +12,7 @@ import {
     Network,
     FileText,
     Repeat,
-    Bot,
+    Globe2,
     CheckCircle2,
 } from "lucide-react";
 
@@ -91,10 +91,10 @@ const services = [
         icon: Network,
         title: "Clearinghouse & EDI Optimization",
         intro:
-            "Supporting clearinghouse implementations, payer enrollments, ERA/EFT setup, claim submission optimization, and workflow automation opportunities.",
+            "Supporting clearinghouse implementations, payor enrollments, ERA/EFT setup, claim submission optimization, and workflow automation opportunities.",
         bullets: [
             "Clearinghouse evaluation",
-            "Payer enrollment support",
+            "Payor enrollment support",
             "ERA / EFT setup",
             "Claim submission optimization",
             "Edits and rejection review",
@@ -130,20 +130,6 @@ const services = [
         ],
     },
     {
-        icon: Bot,
-        title: "AI & Automation Strategy",
-        intro:
-            "Evaluating opportunities for workflow automation, operational efficiencies, and AI-driven revenue cycle improvements.",
-        bullets: [
-            "Automation opportunity assessment",
-            "Bot / RPA use-case mapping",
-            "AI-assisted denial workflows",
-            "Eligibility and authorization automation",
-            "Reporting automation",
-            "Vendor and tooling evaluation",
-        ],
-    },
-    {
         icon: Cpu,
         title: "System Utilization Review",
         intro:
@@ -155,6 +141,20 @@ const services = [
             "Reporting capabilities review",
             "User adoption review",
             "Optimization recommendations",
+        ],
+    },
+    {
+        icon: Globe2,
+        title: "Global Workforce Strategy",
+        intro:
+            "Helping organizations evaluate offshore operational models, workforce structure, productivity, and scalable support strategies across the revenue cycle.",
+        bullets: [
+            "Offshore operational model review",
+            "Workforce structure evaluation",
+            "Productivity and staffing analysis",
+            "Onshore / offshore workflow alignment",
+            "Operational scalability review",
+            "Vendor and partner evaluation",
         ],
     },
 ];

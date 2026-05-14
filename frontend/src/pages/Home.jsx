@@ -13,7 +13,8 @@ import {
     Network,
     FileText,
     Repeat,
-    Bot,
+    Globe2,
+    DollarSign,
 } from "lucide-react";
 import { useSEO } from "../lib/seo";
 import Reveal from "../components/site/Reveal";
@@ -44,7 +45,7 @@ const services = [
     {
         icon: Network,
         title: "Clearinghouse & EDI Optimization",
-        desc: "Supporting clearinghouse implementations, payer enrollments, ERA/EFT setup, claim submission optimization, and workflow automation opportunities.",
+        desc: "Supporting clearinghouse implementations, payor enrollments, ERA/EFT setup, claim submission optimization, and workflow automation opportunities.",
     },
     {
         icon: FileText,
@@ -57,9 +58,9 @@ const services = [
         desc: "Helping organizations redesign workflows, improve processes, strengthen accountability, and optimize operational performance.",
     },
     {
-        icon: Bot,
-        title: "AI & Automation Strategy",
-        desc: "Evaluating opportunities for workflow automation, operational efficiencies, and AI-driven revenue cycle improvements.",
+        icon: Globe2,
+        title: "Global Workforce Strategy",
+        desc: "Helping organizations evaluate offshore operational models, workforce structure, productivity, and scalable support strategies across the revenue cycle.",
     },
 ];
 
@@ -225,7 +226,7 @@ export default function Home() {
                                     </div>
                                     <div>
                                         <div className="text-sm font-bold text-slate-900">Denial Reduction</div>
-                                        <div className="text-xs text-slate-500">Strategy & root-cause review</div>
+                                        <div className="text-xs text-slate-500">Root-cause analysis & workflow improvement</div>
                                     </div>
                                 </div>
                             </motion.div>
@@ -238,11 +239,11 @@ export default function Home() {
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-xl bg-teal-500/20 flex items-center justify-center">
-                                        <BarChart3 className="w-5 h-5 text-teal-300" />
+                                        <DollarSign className="w-5 h-5 text-teal-300" />
                                     </div>
                                     <div>
-                                        <div className="text-sm font-bold text-white">Revenue Cycle Analytics</div>
-                                        <div className="text-xs text-slate-400">KPI dashboards & visibility</div>
+                                        <div className="text-sm font-bold text-white">A/R Performance</div>
+                                        <div className="text-xs text-slate-400">Reducing aging & improving cash flow</div>
                                     </div>
                                 </div>
                             </motion.div>
@@ -257,11 +258,11 @@ export default function Home() {
                         </div>
                         <div className="bg-white/10 border border-white/15 backdrop-blur rounded-xl p-4 text-white">
                             <div className="text-sm font-bold">Denial Reduction</div>
-                            <div className="text-xs text-slate-300">Strategy</div>
+                            <div className="text-xs text-slate-300">Root-cause & workflows</div>
                         </div>
                         <div className="bg-white/10 border border-white/15 backdrop-blur rounded-xl p-4 text-white">
-                            <div className="text-sm font-bold">RC Analytics</div>
-                            <div className="text-xs text-slate-300">KPI dashboards</div>
+                            <div className="text-sm font-bold">A/R Performance</div>
+                            <div className="text-xs text-slate-300">Aging & cash flow</div>
                         </div>
                     </div>
                 </div>

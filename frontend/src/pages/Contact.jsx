@@ -71,7 +71,7 @@ export default function Contact() {
                                     Let's start a conversation about your revenue cycle.
                                 </h2>
                                 <p className="mt-5 text-base text-slate-300 leading-relaxed">
-                                    Whether you're seeing rising denials, slow cash, or workflow friction — we'd love to learn more about your organization and where you'd like to be.
+                                    Whether you're facing operational inefficiencies, rising denials, aging A/R, or cash flow challenges — we'd welcome the opportunity to learn more about your organization and goals.
                                 </p>
 
                                 <div className="mt-8 flex items-center gap-3 text-slate-300">
