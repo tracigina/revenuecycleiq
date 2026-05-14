@@ -16,11 +16,11 @@ export default function Footer() {
             <div className="container-rc py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <div className="md:col-span-1">
-                        <div className="inline-block bg-white rounded-2xl p-4 shadow-lg transition-transform duration-500 hover:scale-[1.02] hover:-rotate-1">
+                        <div className="inline-block rounded-2xl ring-1 ring-slate-200 shadow-xl overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:-rotate-1 bg-white">
                             <img
                                 src={LOGO_URL}
                                 alt="Revenue Cycle IQ logo"
-                                className="h-32 w-32 sm:h-36 sm:w-36 object-contain"
+                                className="h-28 sm:h-32 w-auto object-contain"
                             />
                         </div>
                         <p className="mt-6 text-sm text-slate-400 leading-relaxed max-w-md">

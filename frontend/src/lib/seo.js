@@ -26,4 +26,4 @@ export function useSEO({ title, description, canonical }) {
 }
 
 export const LOGO_URL =
-    "https://customer-assets.emergentagent.com/job_58ef0580-04f6-46a7-9c66-26e38b2ee4ea/artifacts/kyjixs4r_97e2c4e1-7534-4853-9678-217fc1985d65.png";
+    "https://customer-assets.emergentagent.com/job_revenue-insights-72/artifacts/t3lsnefp_8cb78bd4-031c-4fd3-ad7f-0aadd0613e88-1.png";

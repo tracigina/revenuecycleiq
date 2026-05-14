@@ -55,16 +55,12 @@ export default function Contact() {
                         <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-10 relative overflow-hidden">
                             <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-teal-500/15 blur-3xl" aria-hidden />
                             <div className="relative">
-                                <div className="inline-flex items-center gap-3 bg-white rounded-xl p-3">
+                                <div className="inline-block rounded-xl ring-1 ring-slate-200 overflow-hidden bg-white">
                                     <img
-                                        src="https://customer-assets.emergentagent.com/job_58ef0580-04f6-46a7-9c66-26e38b2ee4ea/artifacts/kyjixs4r_97e2c4e1-7534-4853-9678-217fc1985d65.png"
+                                        src="https://customer-assets.emergentagent.com/job_revenue-insights-72/artifacts/t3lsnefp_8cb78bd4-031c-4fd3-ad7f-0aadd0613e88-1.png"
                                         alt="Revenue Cycle IQ logo"
-                                        className="h-10 w-10 object-contain"
+                                        className="h-20 w-auto object-contain"
                                     />
-                                    <div className="leading-tight">
-                                        <div className="font-serif font-bold text-slate-900 text-base">Revenue Cycle IQ</div>
-                                        <div className="text-[10px] uppercase tracking-[0.18em] text-teal-700 font-semibold">Insights That Drive Revenue</div>
-                                    </div>
                                 </div>
 
                                 <h2 className="mt-8 text-3xl font-serif font-bold text-white leading-tight">
