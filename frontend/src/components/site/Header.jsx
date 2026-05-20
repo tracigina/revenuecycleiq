@@ -53,19 +53,31 @@ export default function Header() {
 
                 <nav className="hidden lg:flex items-center gap-1" aria-label="Primary navigation">
                     {NAV.slice(0, 4).map((item) => (
-                        <NavLink
-                            key={item.to}
-                            to={item.to}
-                            end={item.to === "/"}
-                            data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
-                            className={({ isActive }) =>
-                                `nav-link relative px-4 py-2 text-sm font-semibold transition-colors ${
-                                    isActive ? "text-teal-700 is-active" : "text-slate-700 hover:text-teal-700"
-                                }`
-                            }
-                        >
-                            {item.label}
-                        </NavLink>
+                        <span key={item.to} className="flex items-center">
+                            <NavLink
+                                to={item.to}
+                                end={item.to === "/"}
+                                data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
+                                className={({ isActive }) =>
+                                    `nav-link relative px-4 py-2 text-sm font-semibold transition-colors ${
+                                        isActive ? "text-teal-700 is-active" : "text-slate-700 hover:text-teal-700"
+                                    }`
+                                }
+                            >
+                                {item.label}
+                            </NavLink>
+                            {item.to === "/services" && (
+                                <a
+                                    href="https://intelligence.therevenuecycleiq.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    data-testid="nav-link-denial-intelligence"
+                                    className="ml-1 inline-flex items-center border border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-white text-sm font-semibold px-4 py-2 rounded-full transition-all duration-300"
+                                >
+                                    Denial Intelligence
+                                </a>
+                            )}
+                        </span>
                     ))}
                     <NavLink
                         to="/contact"
@@ -102,19 +114,31 @@ export default function Header() {
                 <div className="lg:hidden bg-white border-t border-slate-200" data-testid="mobile-menu">
                     <nav className="container-rc py-4 flex flex-col gap-1" aria-label="Mobile navigation">
                         {NAV.map((item) => (
-                            <NavLink
-                                key={item.to}
-                                to={item.to}
-                                end={item.to === "/"}
-                                data-testid={`mobile-nav-link-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
-                                className={({ isActive }) =>
-                                    `px-4 py-3 text-base font-semibold rounded-md transition-colors ${
-                                        isActive ? "text-teal-700 bg-teal-50" : "text-slate-800 hover:bg-slate-50"
-                                    }`
-                                }
-                            >
-                                {item.label}
-                            </NavLink>
+                            <span key={item.to} className="flex flex-col">
+                                <NavLink
+                                    to={item.to}
+                                    end={item.to === "/"}
+                                    data-testid={`mobile-nav-link-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
+                                    className={({ isActive }) =>
+                                        `px-4 py-3 text-base font-semibold rounded-md transition-colors ${
+                                            isActive ? "text-teal-700 bg-teal-50" : "text-slate-800 hover:bg-slate-50"
+                                        }`
+                                    }
+                                >
+                                    {item.label}
+                                </NavLink>
+                                {item.to === "/services" && (
+                                    <a
+                                        href="https://intelligence.therevenuecycleiq.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        data-testid="mobile-nav-link-denial-intelligence"
+                                        className="px-4 py-3 text-base font-semibold rounded-md text-teal-700 hover:bg-teal-50 transition-colors"
+                                    >
+                                        Denial Intelligence
+                                    </a>
+                                )}
+                            </span>
                         ))}
                     </nav>
                 </div>
