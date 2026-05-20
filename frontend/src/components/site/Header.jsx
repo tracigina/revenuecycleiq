@@ -72,7 +72,7 @@ export default function Header() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     data-testid="nav-link-denial-intelligence"
-                                    className="ml-1 inline-flex items-center border border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-white text-sm font-semibold px-4 py-2 rounded-full transition-all duration-300"
+                                    className="nav-link relative px-4 py-2 text-sm font-semibold text-slate-700 hover:text-teal-700 transition-colors"
                                 >
                                     Denial Intelligence
                                 </a>
