@@ -57,7 +57,7 @@ export default function Contact() {
                             <div className="relative">
                                 <div className="inline-block rounded-xl ring-1 ring-slate-200 overflow-hidden bg-white shadow-lg">
                                     <img
-                                        src="https://customer-assets.emergentagent.com/job_revenue-insights-72/artifacts/t3lsnefp_8cb78bd4-031c-4fd3-ad7f-0aadd0613e88-1.png"
+                                        src="/images/logo.png"
                                         alt="Revenue Cycle IQ logo"
                                         className="h-32 sm:h-36 w-auto object-contain"
                                     />

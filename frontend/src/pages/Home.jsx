@@ -158,7 +158,7 @@ export default function Home() {
                             >
                                 <div className="inline-block rounded-2xl bg-white shadow-[0_24px_60px_-20px_rgba(0,0,0,0.45)] ring-1 ring-white/20 overflow-hidden">
                                     <img
-                                        src="https://customer-assets.emergentagent.com/job_revenue-insights-72/artifacts/t3lsnefp_8cb78bd4-031c-4fd3-ad7f-0aadd0613e88-1.png"
+                                        src="/images/logo.png"
                                         alt="Revenue Cycle IQ — Insights That Drive Revenue"
                                         className="h-44 sm:h-52 lg:h-60 w-auto object-contain"
                                     />

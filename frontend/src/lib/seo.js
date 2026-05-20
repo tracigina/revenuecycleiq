@@ -25,5 +25,4 @@ export function useSEO({ title, description, canonical }) {
     }, [title, description, canonical]);
 }
 
-export const LOGO_URL =
-    "https://customer-assets.emergentagent.com/job_revenue-insights-72/artifacts/t3lsnefp_8cb78bd4-031c-4fd3-ad7f-0aadd0613e88-1.png";
+export const LOGO_URL = "/images/logo.png";
