@@ -67,15 +67,26 @@ export default function Header() {
                                 {item.label}
                             </NavLink>
                             {item.to === "/services" && (
-                                <a
-                                    href="https://intelligence.therevenuecycleiq.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    data-testid="nav-link-denial-intelligence"
-                                    className="nav-link relative px-4 py-2 text-sm font-semibold text-slate-700 hover:text-teal-700 transition-colors"
-                                >
-                                    Denial Intelligence
-                                </a>
+                                <>
+                                    <a
+                                        href="https://intelligence.therevenuecycleiq.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        data-testid="nav-link-denial-intelligence"
+                                        className="nav-link relative px-4 py-2 text-sm font-semibold text-slate-700 hover:text-teal-700 transition-colors"
+                                    >
+                                        Denial Intelligence
+                                    </a>
+                                    <a
+                                        href="https://forecast.therevenuecycleiq.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        data-testid="nav-link-revenue-forecast"
+                                        className="nav-link relative px-4 py-2 text-sm font-semibold text-slate-700 hover:text-teal-700 transition-colors"
+                                    >
+                                        Revenue Forecast
+                                    </a>
+                                </>
                             )}
                         </span>
                     ))}
@@ -128,15 +139,26 @@ export default function Header() {
                                     {item.label}
                                 </NavLink>
                                 {item.to === "/services" && (
-                                    <a
-                                        href="https://intelligence.therevenuecycleiq.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        data-testid="mobile-nav-link-denial-intelligence"
-                                        className="px-4 py-3 text-base font-semibold rounded-md text-teal-700 hover:bg-teal-50 transition-colors"
-                                    >
-                                        Denial Intelligence
-                                    </a>
+                                    <>
+                                        <a
+                                            href="https://intelligence.therevenuecycleiq.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            data-testid="mobile-nav-link-denial-intelligence"
+                                            className="px-4 py-3 text-base font-semibold rounded-md text-teal-700 hover:bg-teal-50 transition-colors"
+                                        >
+                                            Denial Intelligence
+                                        </a>
+                                        <a
+                                            href="https://forecast.therevenuecycleiq.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            data-testid="mobile-nav-link-revenue-forecast"
+                                            className="px-4 py-3 text-base font-semibold rounded-md text-teal-700 hover:bg-teal-50 transition-colors"
+                                        >
+                                            Revenue Forecast
+                                        </a>
+                                    </>
                                 )}
                             </span>
                         ))}
