@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
+const INSIGHTS_URL = "https://insights.therevenuecycleiq.com";
+
 const NAV = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
     { to: "/services", label: "Services" },
-    { to: "/why-revenue-cycle-iq", label: "Why Revenue Cycle IQ" },
     { to: "/book-a-call", label: "Book a Call" },
     { to: "/contact", label: "Contact" },
 ];
@@ -52,7 +53,8 @@ export default function Header() {
                 </Link>
 
                 <nav className="hidden lg:flex items-center gap-1" aria-label="Primary navigation">
-                    {NAV.slice(0, 4).map((item) => (
+                    {/* Home, About, Services + external links */}
+                    {NAV.slice(0, 3).map((item) => (
                         <span key={item.to} className="flex items-center">
                             <NavLink
                                 to={item.to}
@@ -85,6 +87,15 @@ export default function Header() {
                                         className="nav-link relative px-4 py-2 text-sm font-semibold text-slate-700 hover:text-teal-700 transition-colors"
                                     >
                                         Revenue Forecast
+                                    </a>
+                                    <a
+                                        href={INSIGHTS_URL}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        data-testid="nav-link-insights"
+                                        className="nav-link relative px-4 py-2 text-sm font-semibold text-slate-700 hover:text-teal-700 transition-colors"
+                                    >
+                                        Insights
                                     </a>
                                 </>
                             )}
@@ -157,6 +168,15 @@ export default function Header() {
                                             className="px-4 py-3 text-base font-semibold rounded-md text-teal-700 hover:bg-teal-50 transition-colors"
                                         >
                                             Revenue Forecast
+                                        </a>
+                                        <a
+                                            href={INSIGHTS_URL}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            data-testid="mobile-nav-link-insights"
+                                            className="px-4 py-3 text-base font-semibold rounded-md text-teal-700 hover:bg-teal-50 transition-colors"
+                                        >
+                                            Insights
                                         </a>
                                     </>
                                 )}

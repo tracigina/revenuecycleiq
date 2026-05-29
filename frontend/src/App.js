@@ -7,6 +7,9 @@ import Services from "@/pages/Services";
 import WhyRCIQ from "@/pages/WhyRCIQ";
 import BookCall from "@/pages/BookCall";
 import Contact from "@/pages/Contact";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfUse from "@/pages/TermsOfUse";
+import Disclaimer from "@/pages/Disclaimer";
 
 function App() {
     return (
@@ -19,6 +22,9 @@ function App() {
                     <Route path="/why-revenue-cycle-iq" element={<WhyRCIQ />} />
                     <Route path="/book-a-call" element={<BookCall />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/terms-of-use" element={<TermsOfUse />} />
+                    <Route path="/disclaimer" element={<Disclaimer />} />
                     <Route path="*" element={<Home />} />
                 </Routes>
             </Layout>
