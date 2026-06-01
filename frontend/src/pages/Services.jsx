@@ -43,6 +43,7 @@ const services = [
             "Avoidable write-off analysis",
             "Payor pattern review",
             "Denial prevention recommendations",
+            "Optional add-on: Denial Intelligence IQ (proprietary analytics platform)",
         ],
     },
     {
@@ -57,6 +58,7 @@ const services = [
             "Collection barrier identification",
             "Underpayment and delay analysis",
             "Cash acceleration strategy",
+            "Optional add-on: Revenue Forecast IQ (proprietary forecasting platform)",
         ],
     },
     {
